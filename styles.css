@@ -1,0 +1,32 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background: #f8fafc;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.kpi-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.card {
+  background: white;
+  padding: 0.8rem;
+  border-radius: 0.6rem;
+  border: 1px solid #e5e7eb;
+  text-align: center;
+}
+
+.charts {
+  padding: 1rem;
+}
