@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALPAS Middleware Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div>
+      <h1>ALPAS Middleware</h1>
+      <small>Live MFM Telemetry</small>
+    </div>
+    <div>
+      <span id="connectionStatus">Connected</span>
+      <button id="toggleSim">Stop Simulator</button>
+    </div>
+  </nav>
+
+  <section class="vessel-info">
+    <div class="vessel">
+      <p>Bunker Vessel</p>
+      <h3>MT Reliant</h3>
+    </div>
+    <div class="vessel">
+      <p>Receiving Vessel</p>
+      <h3>MT Edge Shipping</h3>
+    </div>
+    <a href="https://alpas.nmdpra.gov.ng/profile/reliant-anchor-logistics" target="_blank">Reliant Anchor Logistics Profile</a>
+  </section>
+
+  <section class="kpi-cards">
+    <div class="card">
+      <h4>Mass Flow</h4>
+      <p id="massFlow">0.00</p>
+      <small>kg/s</small>
+    </div>
+    <div class="card">
+      <h4>Density</h4>
+      <p id="density">0.00</p>
+      <small>kg/m³</small>
+    </div>
+    <div class="card">
+      <h4>Temperature</h4>
+      <p id="temperature">0.0</p>
+      <small>°C</small>
+    </div>
+    <div class="card">
+      <h4>Outbox Buffer</h4>
+      <p id="outbox">0</p>
+      <small>Pending</small>
+    </div>
+  </section>
+
+  <section class="charts">
+    <canvas id="massFlowChart"></canvas>
+    <canvas id="densityTempChart"></canvas>
+  </section>
+
+  <section class="log-table">
+    <h3>Validation & Security Log</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Operation ID</th>
+          <th>Digital Signature</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="logBody"></tbody>
+    </table>
+  </section>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
